@@ -1,0 +1,4 @@
+Targets is a one-dimensional version of the classic Battleship game. Written in C++, this game is meant to be played on the terminal. Each player begins by selecting where they will place their
+"targets" or battleships on the board at locations varying from 1 to 60. Then the game begins with each player attempting to guess the locations of his or her opponent's targets and hitting/sinking
+all of them. If a player hits a target, they will be shown a message saying "HIT," otherwise they will see "MISS." The board is displayed with a combination of "-", "o", and "x". A "-" means that
+that location has not yet been targetted; a "o" means that the location was hit, but no target was found; and an "x" means the location was hit and contained a target.
