@@ -15,11 +15,16 @@ class Board {
 		void displayBoard();
 		bool isDefeated();
 		bool isHitAlready(int location);
+		static int getLocationInput(Board board);  // allows client to ask player 
+							   // for location to shoot
 	private:
+		int getLocationInput(int size); // asks player for location to place target
 		void setupTargets();
-		int getLocationInput(int size);	// asks player location to place target
-		bool isLocationValid(int input, int size);
-		int getTargetIndex(int location);	// returns the index of the target if it
+		void selfSetupTargets();
+		void randomSetupTargets();
+		bool isLocationValid(int location, int size);  // checks if the location is between 1-60
+		static bool isLocationValid(int location, Board board);
+		int getTargetIndex(int location);  // returns the index of the target if it
 														// occupies that location, else returns -1
 
 		const static int SIZE = 60;
